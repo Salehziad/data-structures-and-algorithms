@@ -131,6 +131,22 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 
 const evenOdd = (arr) => {
   // Solution code here...
+    let newArr=[];
+  arr.map(e=>{
+     if(isNaN(e) == true){
+           e="N/A";
+          newArr.push(e);
+      }
+     else if(e%2===0){
+          e="even";
+          newArr.push(e);
+      }else if(e%2!==0){
+                    e="odd";
+          newArr.push(e);
+      }
+
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
