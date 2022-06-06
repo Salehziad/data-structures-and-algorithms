@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,8 +27,8 @@ const getNames = (arr) => {
   // Solution code here...
   let array=[];
   arr.map(e=>{
-    array.push(e.name.split('').reduce((acc, currItem)=> currItem + acc, ''))
-  })
+    array.push(e.name.split('').reduce((acc, currItem)=> currItem + acc, ''));
+  });
   return array;
 };
 
@@ -40,7 +41,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 const appendTheEnd = (str) => {
   // Solution code here...
-  return str + " The end.";
+  return str + ' The end.';
 };
 
 /* ------------------------------------------------------------------------------------------------
