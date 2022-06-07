@@ -6,7 +6,7 @@
 [whiteboard flow chart](./code%20challenge%20class%2001.md)
 ## code challenge class 02
 [whiteboard flow chart](./Code%20Challenge%20claass%2002.md)
-## code challenge class 04
+## code challenge class 05
 [whiteboard flow chart](./Code%20Challenge%20class04.md)
 ### Folder and Challenge Setup
 
