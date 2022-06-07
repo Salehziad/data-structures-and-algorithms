@@ -4,5 +4,7 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+![binary search](./assest/pinary.PNG)
+
 ## Approach & Efficiency
+- i think in this way it make search more easy and fast.
