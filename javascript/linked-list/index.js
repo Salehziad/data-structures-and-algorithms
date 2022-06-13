@@ -74,7 +74,7 @@ class LinkedList{
     let count=0;
 
     while(current){
-      if(count==index){
+      if(count===index){
         return current.data;
       }
       count++;
@@ -139,17 +139,18 @@ class LinkedList{
 }
 
 const ll=new LinkedList();
-ll.insertFirst('first');
-ll.insertFirst('second');
-// console.log(getSpecificData("first"));
-// ll.removeAtt(1);
-// ll.getAt(1);
+ll.insertLast('7');
+ll.insertLast('10');
+ll.insertLast('55');
+ll.insertLast('66');
+ll.insertLast('5');
+ll.insertLast('10');
+ll.insertLast('esraa');
+ll.insertAt('x',5);
 ll.printListData();
-// ll.insertFirst("first");
-// ll.insertFirst("second");
-// console.log(ll.getAt(0))
-console.log(ll.getSpecificData('second'));
-// console.log(ll.head.next)
-// console.log(ll.head.data)
-// console.log(ll.size)
+// ll.insertLast('q')         1
+// ll.insertBefore('x','66')  2
+// ll.insertAfter('z','10')   3
+console.log('**********************');
+
 module.exports=LinkedList;

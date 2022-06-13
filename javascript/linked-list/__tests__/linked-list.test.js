@@ -1,4 +1,4 @@
-const { listenerCount } = require('process');
+'use strict';
 const LinkedList = require('../index');
 
 describe('', () => {
