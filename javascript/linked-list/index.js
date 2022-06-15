@@ -69,16 +69,20 @@ class LinkedList{
     this.size++;
   }
   // get an index
-  getAt(index){
+  getAtK(index){
+    index=this.size-index-1;
     let current=this.head;
     let count=0;
-
     while(current){
-      if(count===index){
+      if(index>=this.size || index<0){
+        return 'Exception';
+      }
+      else if(count===index){
         return current.data;
       }
       count++;
       current=current.next;
+      console.log(current);
     }
 
   }
@@ -132,21 +136,22 @@ class LinkedList{
       current=current.next;
     }
 
-    allList=allList +'NULL';
+    allList=allList +'x';
     console.log(allList);
     return allList;
   }
 }
 
 const ll=new LinkedList();
-ll.insertLast('7');
-ll.insertLast('10');
-ll.insertLast('55');
-ll.insertLast('66');
-ll.insertLast('5');
-ll.insertLast('10');
-ll.insertLast('esraa');
-ll.insertAt('x',5);
+ll.insertLast('0');
+// ll.insertLast('1');
+// ll.insertLast('2');
+// ll.insertLast('3');
+// ll.insertLast('4');
+// ll.insertLast('5');
+// ll.insertLast('6');
+// ll.insertLast('7');
+console.log(ll.getAtK(1));
 ll.printListData();
 // ll.insertLast('q')         1
 // ll.insertBefore('x','66')  2
