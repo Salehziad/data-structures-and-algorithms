@@ -5,6 +5,7 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 ## Whiteboard Process
 ![binary search](./assest/pinary.PNG)
+![binary search](./assest/pinary%202.PNG)
 
 ## Approach & Efficiency
 - i think in this way it make search more easy and fast.
