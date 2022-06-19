@@ -4,6 +4,12 @@
 
 ## code challenge class 01
 [whiteboard flow chart](./code%20challenge%20class%2001.md)
+## code challenge class 02
+[whiteboard flow chart](./Code%20Challenge%20claass%2002.md)
+## code challenge class 03
+[whiteboard flow chart](./Code%20Challenge%20class04.md)
+## code challenge class 05 
+[whiteboard flow chart](./Code%20challenge%20class05.md)
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.

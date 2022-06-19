@@ -75,7 +75,7 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
-  if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})+$/.test(email)){
+  if(/^\w+\.?\w+@\w+.(com|net|org)$/.test(email)){
     return true
 }else {return false}
 };
@@ -103,7 +103,7 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
-  if(/^\(\+?\d{1,4}()?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(phoneNumber)){
+  if(/^(\((\d{3})\)[\s]?|(\d{3})[\s-]?)(\d{3})[\s-]?(\d{4})$/.test(phoneNumber)){
     return true
 }else {return false}
 };
@@ -192,7 +192,7 @@ describe('Testing challenge 5', () => {
     expect(validateEmail('joe.schmoe@codefellows.net')).toBeTruthy();
   });
 
-  test.skip('It should fail things that aren\'t email addresses', () => {
+  test('It should fail things that aren\'t email addresses', () => {
     expect(validateEmail('justastring')).toBeFalsy();
     expect(validateEmail('missingadomain')).toBeFalsy();
     expect(validateEmail('@noname.com')).toBeFalsy();
@@ -207,7 +207,7 @@ describe('Testing challenge 5', () => {
 });
 
 describe('Testing challenge 6', () => {
-  test.skip('It should match the acceptable phone number formats', () => {
+  test('It should match the acceptable phone number formats', () => {
     expect(validatePhoneNumber('(555) 555-5555')).toBeTruthy();
     expect(validatePhoneNumber('555 555-5555')).toBeTruthy();
     expect(validatePhoneNumber('555-555-5555')).toBeTruthy();
@@ -215,7 +215,7 @@ describe('Testing challenge 6', () => {
     expect(validatePhoneNumber('5555555555')).toBeTruthy();
     expect(validatePhoneNumber('234 567 8910')).toBeTruthy();
   });
-  test.skip('It should not match unacceptable phone number formats', () => {
+  test('It should not match unacceptable phone number formats', () => {
     expect(validatePhoneNumber('abcdefghij')).toBeFalsy();
     expect(validatePhoneNumber('222 222 2222 ext. 2222')).toBeFalsy();
     expect(validatePhoneNumber('(222 222-2222')).toBeFalsy();

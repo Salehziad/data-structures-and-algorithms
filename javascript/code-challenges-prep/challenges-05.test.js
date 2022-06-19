@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
@@ -13,11 +14,11 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = (people) => {
   // Solution code here...
-  let newArr=[];
-  people.map(e=>{
- let x=e.firstName+" "+e.lastName;
+  let newArr = [];
+  people.map(e => {
+    let x = e.firstName + '' + e.lastName;
     newArr.push(x);
-  })
+  });
   return newArr;
 };
 
@@ -35,7 +36,7 @@ const addValues = (arr) => {
     initialValue
   );
   return sumWithInitial;
-  
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -98,7 +99,8 @@ let starWarsData = [{
   skin_color: 'gold',
   eye_color: 'yellow',
   birth_year: '112BBY',
-  gender: 'n/a'},
+  gender: 'n/a'
+},
 {
   name: 'R2-D2',
   height: '96',
@@ -128,15 +130,16 @@ let starWarsData = [{
   eye_color: 'brown',
   birth_year: '19BBY',
   gender: 'female'
-}];
+}
+];
 
 const returnNames = (arr) => {
   // Solution code here...
-  let array=[]
-  arr.reduce(function(accumulator,currentValue){
-    array.push(currentValue.name)
-    return array;
-  })
+  let array = [];
+  arr.reduce(function (accumulator, currentValue) {
+    array.push(currentValue.name);
+    return array.toString();
+  });
   return array;
 };
 
@@ -150,7 +153,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
-  return str.split('').reduce((acc, currItem)=> currItem + acc, '');
+  return str.split('').reduce((acc, currItem) => currItem + acc, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -159,47 +162,46 @@ CHALLENGE 7 - Stretch Goal
 Write a function named countNumberOfChildren that, given the array of characters, below, uses reduce to return the total number of children in the data set.
 ------------------------------------------------------------------------------------------------ */
 
-const characters = [
-  {
-    name: 'Eddard',
-    spouse: 'Catelyn',
-    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
-    house: 'Stark',
-  },
-  {
-    name: 'Jon',
-    spouse: 'Lysa',
-    children: ['Robin'],
-    house: 'Arryn',
-  },
-  {
-    name: 'Cersei',
-    spouse: 'Robert',
-    children: ['Joffrey', 'Myrcella', 'Tommen'],
-    house: 'Lannister',
-  },
-  {
-    name: 'Daenarys',
-    spouse: 'Khal Drogo',
-    children: ['Drogon', 'Rhaegal', 'Viserion'],
-    house: 'Targaryen',
-  },
-  {
-    name: 'Mace',
-    spouse: 'Alerie',
-    children: ['Margaery', 'Loras'],
-    house: 'Tyrell',
-  },
-  {
-    name: 'Sansa',
-    spouse: 'Tyrion',
-    house: 'Stark',
-  },
-  {
-    name: 'Jon',
-    spouse: null,
-    house: 'Snow',
-  },
+const characters = [{
+  name: 'Eddard',
+  spouse: 'Catelyn',
+  children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+  house: 'Stark',
+},
+{
+  name: 'Jon',
+  spouse: 'Lysa',
+  children: ['Robin'],
+  house: 'Arryn',
+},
+{
+  name: 'Cersei',
+  spouse: 'Robert',
+  children: ['Joffrey', 'Myrcella', 'Tommen'],
+  house: 'Lannister',
+},
+{
+  name: 'Daenarys',
+  spouse: 'Khal Drogo',
+  children: ['Drogon', 'Rhaegal', 'Viserion'],
+  house: 'Targaryen',
+},
+{
+  name: 'Mace',
+  spouse: 'Alerie',
+  children: ['Margaery', 'Loras'],
+  house: 'Tyrell',
+},
+{
+  name: 'Sansa',
+  spouse: 'Tyrion',
+  house: 'Stark',
+},
+{
+  name: 'Jon',
+  spouse: null,
+  house: 'Snow',
+},
 ];
 
 const countNumberOfChildren = (arr) => {
@@ -248,31 +250,30 @@ If the input array does not have a stat with that specific name, the function sh
 ------------------------------------------------------------------------------------------------ */
 
 const snorlaxData = {
-  stats: [
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/6/',
-        name: 'speed',
-      },
-      effort: 5,
-      baseStat: 30,
+  stats: [{
+    stat: {
+      url: 'https://pokeapi.co/api/v2/stat/6/',
+      name: 'speed',
     },
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/5/',
-        name: 'special-defense',
-      },
-      effort: 2,
-      baseStat: 110,
+    effort: 5,
+    baseStat: 30,
+  },
+  {
+    stat: {
+      url: 'https://pokeapi.co/api/v2/stat/5/',
+      name: 'special-defense',
     },
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/4/',
-        name: 'special-attack',
-      },
-      effort: 9,
-      baseStat: 65,
+    effort: 2,
+    baseStat: 110,
+  },
+  {
+    stat: {
+      url: 'https://pokeapi.co/api/v2/stat/4/',
+      name: 'special-attack',
     },
+    effort: 9,
+    baseStat: 65,
+  },
   ],
   name: 'snorlax',
   weight: 4600,
@@ -309,7 +310,13 @@ Run your tests from the console: jest challenges-09.test.js
 describe('Testing challenge 1', () => {
   test('It should convert object to full name string', () => {
 
-    const people = [{ firstName: 'Jane', lastName: 'Doe' }, { firstName: 'James', lastName: 'Bond' }];
+    const people = [{
+      firstName: 'Jane',
+      lastName: 'Doe'
+    }, {
+      firstName: 'James',
+      lastName: 'Bond'
+    }];
 
     expect(toLastNames(people)).toStrictEqual(['Jane Doe', 'James Bond']);
 
@@ -326,7 +333,13 @@ describe('Testing challenge 2', () => {
 
 describe('Testing challenge 3', () => {
   test('It should add the purchase price', () => {
-    expect(addPurchases([{item: 'switch', purchasePrice: 399}, {item: 'toothpaste', purchasePrice: 2}])).toStrictEqual(401);
+    expect(addPurchases([{
+      item: 'switch',
+      purchasePrice: 399
+    }, {
+      item: 'toothpaste',
+      purchasePrice: 2
+    }])).toStrictEqual(401);
     expect(addPurchases([])).toStrictEqual(0);
   });
 });
@@ -338,8 +351,8 @@ describe('Testing challenge 4', () => {
 });
 
 describe('Testing challenge 5', () => {
-  test.skip('It should return an array continaing the names of the characters', () => {
-    expect(returnNames(starWarsData)).toStrictEqual([ 'Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa' ]);
+  test('It should return an array continaing the names of the characters', () => {
+    expect(returnNames(starWarsData)).toStrictEqual(['Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa']);
     expect(returnNames(starWarsData).length).toStrictEqual(5);
   });
 });
@@ -358,7 +371,7 @@ xdescribe('Testing challenge 7', () => {
 
 xdescribe('Testing challenge 8', () => {
   test('It should return the average of the numbers in the array', () => {
-    expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85 ])).toStrictEqual(64);
+    expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85])).toStrictEqual(64);
   });
 });
 
@@ -370,13 +383,20 @@ xdescribe('Testing challenge 9', () => {
 
 xdescribe('Testing challenge 10', () => {
   test('It should return any stats that match the input', () => {
-    expect(extractStat('speed', snorlaxData.stats)).toStrictEqual({ stat: { url: 'https://pokeapi.co/api/v2/stat/6/', name: 'speed' }, effort: 5, baseStat: 30 });
+    expect(extractStat('speed', snorlaxData.stats)).toStrictEqual({
+      stat: {
+        url: 'https://pokeapi.co/api/v2/stat/6/',
+        name: 'speed'
+      },
+      effort: 5,
+      baseStat: 30
+    });
   });
 });
 
 xdescribe('Testing challenge 11', () => {
   test('It should return an array containing the names of the children', () => {
-    expect(extractChildren(characters)).toStrictEqual([ 'Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras' ]);
+    expect(extractChildren(characters)).toStrictEqual(['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras']);
     expect(extractChildren(characters).length).toStrictEqual(10);
   });
 });

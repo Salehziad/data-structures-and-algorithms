@@ -9,27 +9,27 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 ------------------------------------------------------------------------------------------------ */
 const raisedToTheThird = (arr) => {
   // Solution code here...
-  let newArr=[];
-  arr.map(e=>{
-    e=Math.pow(e,3)
+  let newArr = [];
+  arr.map(e => {
+    e = Math.pow(e, 3);
     newArr.push(e);
-  })
+  });
   return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1. 
+Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1.
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
   // Solution code here...
-  let newArr=[];
-  arr.map(e=>{
-    e+=1
+  let newArr = [];
+  arr.map(e => {
+    e += 1;
     newArr.push(e);
-  })
+  });
   return newArr;
 };
 
@@ -41,11 +41,11 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   // Solution code here...
-  let newArr=[];
-  arr.map(e=>{
-    e=e+"?"
+  let newArr = [];
+  arr.map(e => {
+    e = e + '?';
     newArr.push(e);
-  })
+  });
   return newArr;
 };
 
@@ -61,11 +61,11 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 
 const forLoopTwoToThe = (arr) => {
   // Solution code here...
-  let newArr=[];
-  arr.map(e=>{
-    e=Math.pow(2,e)
+  let newArr = [];
+  arr.map(e => {
+    e = Math.pow(2, e);
     newArr.push(e);
-  })
+  });
   return newArr;
 };
 
@@ -77,9 +77,9 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
   // Solution code here...
-  let newArr=[];
+  let newArr = [];
   arr.forEach(e => {
-    e=Math.pow(2,e)
+    e = Math.pow(2, e);
     newArr.push(e);
   });
   return newArr;
@@ -93,11 +93,11 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
-  let newArr=[];
-  arr.map(e=>{
-    e=Math.pow(2,e)
+  let newArr = [];
+  arr.map(e => {
+    e = Math.pow(2, e);
     newArr.push(e);
-  })
+  });
   return newArr;
 };
 
@@ -112,10 +112,10 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 const charCode = (arr) => {
-  let newArr=[];
-  arr.map(e=>{
+  let newArr = [];
+  arr.map(e => {
     newArr.push(e.charCodeAt(0));
-  })
+  });
   return newArr;
 };
 
@@ -131,21 +131,20 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 
 const evenOdd = (arr) => {
   // Solution code here...
-    let newArr=[];
-  arr.map(e=>{
-     if(isNaN(e) == true){
-           e="N/A";
-          newArr.push(e);
-      }
-     else if(e%2===0){
-          e="even";
-          newArr.push(e);
-      }else if(e%2!==0){
-                    e="odd";
-          newArr.push(e);
-      }
+  let newArr = [];
+  arr.map(e => {
+    if (isNaN(e) === true) {
+      e = 'N/A';
+      newArr.push(e);
+    } else if (e % 2 === 0) {
+      e = 'even';
+      newArr.push(e);
+    } else if (e % 2 !== 0) {
+      e = 'odd';
+      newArr.push(e);
+    }
 
-  })
+  });
   return newArr;
 };
 
@@ -161,31 +160,30 @@ extractAbilities(snorlaxAbilities.abilities)
 ------------------------------------------------------------------------------------------------ */
 
 const snorlaxAbilities = {
-  abilities: [
-    {
-      slot: 3,
-      is_hidden: true,
-      ability: {
-        url: 'https://pokeapi.co/api/v2/ability/82/',
-        name: 'gluttony',
-      },
+  abilities: [{
+    slot: 3,
+    is_hidden: true,
+    ability: {
+      url: 'https://pokeapi.co/api/v2/ability/82/',
+      name: 'gluttony',
     },
-    {
-      slot: 2,
-      is_hidden: false,
-      ability: {
-        url: 'https://pokeapi.co/api/v2/ability/56/',
-        name: 'cute charm',
-      },
+  },
+  {
+    slot: 2,
+    is_hidden: false,
+    ability: {
+      url: 'https://pokeapi.co/api/v2/ability/56/',
+      name: 'cute charm',
     },
-    {
-      slot: 1,
-      is_hidden: false,
-      ability: {
-        url: 'https://pokeapi.co/api/v2/ability/17/',
-        name: 'immunity',
-      },
+  },
+  {
+    slot: 1,
+    is_hidden: false,
+    ability: {
+      url: 'https://pokeapi.co/api/v2/ability/17/',
+      name: 'immunity',
     },
+  },
   ],
   name: 'snorlax',
   weight: 4600,
@@ -208,31 +206,30 @@ Here is an example of a single array element: { name: 'speed', total: 35 }
 ------------------------------------------------------------------------------------------------ */
 
 const snorlaxStats = {
-  stats: [
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/6/',
-        name: 'speed',
-      },
-      effort: 5,
-      baseStat: 30,
+  stats: [{
+    stat: {
+      url: 'https://pokeapi.co/api/v2/stat/6/',
+      name: 'speed',
     },
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/5/',
-        name: 'special-defense',
-      },
-      effort: 2,
-      baseStat: 110,
+    effort: 5,
+    baseStat: 30,
+  },
+  {
+    stat: {
+      url: 'https://pokeapi.co/api/v2/stat/5/',
+      name: 'special-defense',
     },
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/4/',
-        name: 'special-attack',
-      },
-      effort: 9,
-      baseStat: 65,
+    effort: 2,
+    baseStat: 110,
+  },
+  {
+    stat: {
+      url: 'https://pokeapi.co/api/v2/stat/4/',
+      name: 'special-attack',
     },
+    effort: 9,
+    baseStat: 65,
+  },
   ],
   name: 'snorlax',
   weight: 4600,
@@ -306,29 +303,29 @@ describe('Testing challenge 6', () => {
 
 xdescribe('Testing challenge 7', () => {
   test('It should return an array containing the character code for each letter', () => {
-    expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1'])).toStrictEqual([ 67, 111, 100, 101, 51, 48, 49 ]);
+    expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1'])).toStrictEqual([67, 111, 100, 101, 51, 48, 49]);
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1']).length).toStrictEqual(7);
   });
 });
 
 xdescribe('Testing challenge 8', () => {
   test('It should return an array containing the keys from an object', () => {
-    expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541])).toStrictEqual([ 'odd', 'even', 'even', 'even', 'odd', 'odd', 'even', 'odd' ]);
+    expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541])).toStrictEqual(['odd', 'even', 'even', 'even', 'odd', 'odd', 'even', 'odd']);
     expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541]).length).toStrictEqual(8);
   });
 
   test('It should work with all odd numbers', () => {
-    expect(evenOdd([1, 3, 5, 7, 9])).toStrictEqual([ 'odd', 'odd', 'odd', 'odd', 'odd' ]);
+    expect(evenOdd([1, 3, 5, 7, 9])).toStrictEqual(['odd', 'odd', 'odd', 'odd', 'odd']);
     expect(evenOdd([1, 3, 5, 7, 9]).length).toStrictEqual(5);
   });
 
   test('It should work with all even numbers', () => {
-    expect(evenOdd([2, 4, 6, 8, 10])).toStrictEqual([ 'even', 'even', 'even', 'even', 'even' ]);
+    expect(evenOdd([2, 4, 6, 8, 10])).toStrictEqual(['even', 'even', 'even', 'even', 'even']);
     expect(evenOdd([2, 4, 6, 8, 10]).length).toStrictEqual(5);
   });
 
   test('It should return the string "N/A" if a non-number is included in the array', () => {
-    expect(evenOdd([5, 8, 2, 'hi'])).toStrictEqual([ 'odd', 'even', 'even', 'N/A' ]);
+    expect(evenOdd([5, 8, 2, 'hi'])).toStrictEqual(['odd', 'even', 'even', 'N/A']);
     expect(evenOdd([5, 8, 2, 'hi']).length).toStrictEqual(4);
   });
 });
@@ -342,10 +339,18 @@ xdescribe('Testing challenge 9', () => {
 
 xdescribe('Testing challenge 10', () => {
   test('It should return an array containing objects with name and total values', () => {
-    expect(extractStats(snorlaxStats.stats)).toStrictEqual([
-      { name: 'speed', total: 35, },
-      { name: 'special-defense', total: 112, },
-      { name: 'special-attack', total: 74, },
+    expect(extractStats(snorlaxStats.stats)).toStrictEqual([{
+      name: 'speed',
+      total: 35,
+    },
+    {
+      name: 'special-defense',
+      total: 112,
+    },
+    {
+      name: 'special-attack',
+      total: 74,
+    },
     ]);
     expect(extractStats(snorlaxStats.stats).length).toStrictEqual(3);
   });
