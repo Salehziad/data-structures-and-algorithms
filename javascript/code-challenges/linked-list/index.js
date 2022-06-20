@@ -116,7 +116,7 @@ class LinkedList{
     this.head=null;
     this.size=0;
   }
-  ziperList(head1,head2){
+  zipList(head1,head2){
     let tail=head1.head;
     let current1=head1.head.next;
     let current2=head2.head;
@@ -158,13 +158,19 @@ const ll=new LinkedList();
 ll.insertLast('2');
 ll.insertLast('3');
 ll.insertLast('4');
+
+
 const ll2=new LinkedList();
 ll2.insertLast('a');
 ll2.insertLast('b');
 ll2.insertLast('c');
+ll2.insertLast('4');
+ll2.insertLast('4');
+ll2.insertLast('4');
+ll2.insertLast('4');
 ll.printListData();
 const ll3=new LinkedList();
-ll3.ziperList(ll,ll2);
+ll3.zipList(ll,ll2);
 // ll3.zipLists(ll,ll2);
 ll2.printListData();
 ll3.printListData();
