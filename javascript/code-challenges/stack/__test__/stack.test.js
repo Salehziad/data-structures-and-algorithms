@@ -50,8 +50,4 @@ describe('', () => {
     expect(newStack.top).toBeNull();
     expect(newStack.size).toBe(0);
   });
-//   test('Calling pop or peek on empty stack raises exception',()=>{
-//     const newStack=new Stack();
-    
-//   });
 });
