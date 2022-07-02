@@ -152,33 +152,23 @@ class LinkedList {
     return allList;
   }
 
-  insertBefore(targetValue, insertedValue) {
-    targetValue -= '';
-    insertedValue -= '';
-    // console.log(targetValue,insertedValue);
-    const node = new Node(insertedValue);
-    // console.log({node});
-    let current = this.head;
-    // console.log({current});
-    let x = this.head;
-    console.log({
-      x
-    });
-    if (current.data - '' === targetValue) {
+  insertBefore(data, addedData) {
+    const node = new Node(addedData);
+    let currentNode = this.head;
+    if (currentNode.data === data) {
+      node.next = currentNode;
       this.head = node;
-      this.length++;
+      return;
     }
-    while (current.next) {
-      // console.log("gggg");
-      if (current.next.data - '' === targetValue) {
-        console.log("hh");
-        node.next = current.next;
-        current.next = node;
-        return this;
+    while (currentNode) {
+      if (currentNode.next.data === data) {
+        node.next = currentNode.next;
+        currentNode.next = node;
+        break;
       }
-      current = current.next;
+
+      currentNode = currentNode.next;
     }
-    return this;
   }
   isPalindrome(list) {
     // console.log(list);
@@ -191,10 +181,14 @@ class LinkedList {
       listValues = listValues.next;
     }
 
-    console.log({arr});
+    console.log({
+      arr
+    });
     while (reversedValues) {
       let temp = arr.pop();
-      console.log({temp});
+      console.log({
+        temp
+      });
       if (temp !== reversedValues.data) {
         state = false;
         break;
@@ -209,7 +203,9 @@ const ll = new LinkedList();
 ll.insertLast('o');
 ll.insertLast('n');
 ll.insertLast('o');
-console.log(ll.isPalindrome(ll));
+ll.insertBefore('o', 'a');
+
+// console.log(ll.isPalindrome(ll));
 ll.printListData();
 // const ll2=new LinkedList();
 // ll2.insertLast('a');
