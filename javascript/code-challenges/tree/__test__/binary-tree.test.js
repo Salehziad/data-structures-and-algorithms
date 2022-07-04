@@ -48,4 +48,8 @@ describe('Binary Tree', () => {
     let postOrder = tree.postOrder();
     expect(postOrder).toEqual(expectedOutput);
   });
+  test('max value',()=>{
+    let maxValue= tree.max();
+    expect(maxValue).toEqual(9);
+  });
 });

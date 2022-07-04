@@ -6,7 +6,7 @@ module.exports = class binaryTree {
   preOrder() {
     let result = [];
     let traverse = (node) => {
-    //   console.log('ccc',node);
+      //   console.log('ccc',node);
       result.push(node.value);
       if (node.left) traverse(node.left);
       if (node.right) traverse(node.right);
@@ -34,17 +34,36 @@ module.exports = class binaryTree {
     traverse(this.root);
     return result;
   }
-//  insertNode(node, newNode) {
-//     // console.log('111',newNode);
-//     // console.log('2222',node);
-//     if (newNode.value < node.value) {
-//       if (!node.left) node.left = newNode;
-//       else this.insertNode(node.left, newNode);
-//     } else {
-//       if (!node.right) node.right = newNode;
-//       else this.insertNode(node.right, newNode);
-//     }
-//     return newNode;
-//   }
+  max() {
+    let max = 0;
+    let maxValue = (node) => {
+      if (node.value>max) max=node.value;
+      if (node.left) {
+        let leftValue=node.left.value;
+        console.log(leftValue);
+        if (leftValue>max) max=leftValue;
+        maxValue(node.left);
+      }
+      if(node.right) {
+        let rightValue=node.right.value;
+        console.log(rightValue);
+        if (rightValue>max) max=rightValue;
+        maxValue(node.right);
+      }
+    };
+    maxValue(this.root);
+    return max;
+  }
+  //  insertNode(node, newNode) {
+  //     // console.log('111',newNode);
+  //     // console.log('2222',node);
+  //     if (newNode.value < node.value) {
+  //       if (!node.left) node.left = newNode;
+  //       else this.insertNode(node.left, newNode);
+  //     } else {
+  //       if (!node.right) node.right = newNode;
+  //       else this.insertNode(node.right, newNode);
+  //     }
+  //     return newNode;
+  //   }
 };
-
