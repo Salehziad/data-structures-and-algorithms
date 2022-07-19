@@ -43,8 +43,9 @@ nine.left=four;
 // t6.right=t10;//
 /////////////////////////////      19
 let tree=new BinaryTree(two);
-let x=tree.fizzBuzz();
-console.log(x);
+// let x=tree.fizzBuzz();
+tree=tree.fizzBuzz();
+console.log(tree);
 // let x="sara";
 // console.log(x.includes("."));
 // console.log(tree.che);

@@ -68,6 +68,8 @@ module.exports = class binaryTree {
     traverse(this.root);
     return result;
   }
+
+  
   checkFiles() {
     let count = 0;
     let traverse = (node) => {
@@ -90,6 +92,8 @@ module.exports = class binaryTree {
     traverse(this.root);
     return count;
   }
+
+
   fizzBuzz() {
     let traverse = (node) => {
       if (node.left) {
@@ -97,7 +101,6 @@ module.exports = class binaryTree {
         console.log(node.left);
         traverse(node.left);
       }
-      return node;
     };
     traverse(this.root);
     // return(traverse());
