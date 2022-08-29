@@ -1,0 +1,16 @@
+{
+  "name": "class-30",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hashtable.js",
+  "scripts": {
+    "test": "jest --verbose --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.0.1",
+    "supertest": "^6.2.4"
+  }
+}
